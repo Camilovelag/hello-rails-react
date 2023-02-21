@@ -110,12 +110,6 @@ To run the project, execute the following command:
 ./bin/dev
 ```
 
-or
-
-```
-rails server
-```
-
 <!-- AUTHORS -->
 
 ## 👥 Author <a name="authors"></a>
