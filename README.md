@@ -87,11 +87,19 @@ Clone this repository to your desired folder:
 
 ### Install
 
+Install this project running the following commands:
+
 ```
-  bundle install
-  rails db:create
-  rails db:migrate
-  rails db:seed
+./bin/bundle install
+./bin/rails javascript:install:webpack
+```
+
+Then, create and populate the database running:
+
+```
+rails db:create
+rails db:migrate
+rails db:seed
 ```
 
 ### Usage
@@ -99,7 +107,13 @@ Clone this repository to your desired folder:
 To run the project, execute the following command:
 
 ```
-  ./bin/dev
+./bin/dev
+```
+
+or
+
+```
+rails server
 ```
 
 <!-- AUTHORS -->
