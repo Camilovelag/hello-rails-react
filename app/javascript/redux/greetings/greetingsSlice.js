@@ -11,13 +11,27 @@ const getGreetings = createAsyncThunk('greetings/getGreetings',
 const greetingsReducer = createSlice({
   name: 'greetings',
   initialState: {
-    message: 'No greetings message.'
+    message: '',
+    loading: false,
+    error: '',
   },
   reducers: {},
   extraReducers: (builder) => {
+    builder.addCase(getGreetings.pending, (state) => ({
+      ...state,
+      message: 'Loading new greeting, please wait...',
+      loading: true,
+    }));
     builder.addCase(getGreetings.fulfilled, (state, action) => ({
       ...state,
       message: action.payload,
+      loading: false,
+    }));
+    builder.addCase(getGreetings.rejected, (state, action) => ({
+      ...state,
+      message: 'No greetings messages loaded.',
+      loading: false,
+      error: action.error.message,
     }));
   },
 });
