@@ -87,7 +87,7 @@ Clone this repository to your desired folder:
 
 ### Install
 
-Install this project running the following commands (if overwrites, type _n_):
+Install this project running the following commands (if overwrites, type `n`):
 
 ```
 ./bin/bundle install
